@@ -4,7 +4,7 @@ import numpy as np
 import mediapipe as mp
 from mediapipe.python.solutions.drawing_utils import _normalized_to_pixel_coordinates as denormalize_coordinates
 
-
+#初始化 Mediapipe Face Mesh 解決方案對象。
 def get_mediapipe_app(
     max_num_faces=1,
     refine_landmarks=True,
@@ -74,7 +74,7 @@ def calculate_avg_ear(landmarks, left_eye_idxs, right_eye_idxs, image_w, image_h
 
     return Avg_EAR, (left_lm_coordinates, right_lm_coordinates)
 
-
+#此函數繪製檢測到的（和選擇的）眼睛標誌。
 def plot_eye_landmarks(frame, left_lm_coordinates, right_lm_coordinates, color):
     for lm_coordinates in [left_lm_coordinates, right_lm_coordinates]:
         if lm_coordinates:
@@ -84,7 +84,7 @@ def plot_eye_landmarks(frame, left_lm_coordinates, right_lm_coordinates, color):
     frame = cv2.flip(frame, 1)
     return frame
 
-
+#此函數用於在視頻幀上繪製文本，例如EAR值。
 def plot_text(image, text, origin, color, font=cv2.FONT_HERSHEY_SIMPLEX, fntScale=0.8, thickness=2):
     image = cv2.putText(image, text, origin, font, fntScale, color, thickness)
     return image
