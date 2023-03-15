@@ -23,3 +23,5 @@ Want to become an expert in AI? [AI Courses by OpenCV](https://opencv.org/course
 <img src="https://learnopencv.com/wp-content/uploads/2023/01/AI-Courses-By-OpenCV-Github.png">
 </p>
 </a>
+
+EX: [Roboflow inference Example](https://detect.roboflow.com/?model=drowsiness-detection-cntmz&version=2&api_key=R8FxGniAQOhh8HWEozwJ#)
