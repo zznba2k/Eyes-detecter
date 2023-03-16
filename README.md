@@ -25,4 +25,7 @@ Want to become an expert in AI? [AI Courses by OpenCV](https://opencv.org/course
 </a>
 
 EX: [Roboflow inference Example](https://detect.roboflow.com/?model=drowsiness-detection-cntmz&version=2&api_key=R8FxGniAQOhh8HWEozwJ#)
-[Mediapipe Face Point](https://github.com/google/mediapipe/blob/a908d668c730da128dfa8d9f6bd25d519d006692/mediapipe/modules/face_geometry/data/canonical_face_model_uv_visualization.png)
+
+
+This is about [Mediapipe Face Point](https://github.com/google/mediapipe/blob/a908d668c730da128dfa8d9f6bd25d519d006692/mediapipe/modules/face_geometry/data/canonical_face_model_uv_visualization.png)
+  
