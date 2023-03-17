@@ -6,5 +6,5 @@ opencv-python-headless
 pydub
 mediapipe
 streamlit==1.13.0
-streamlit_webrtc
-streamlit-nested-layout
+streamlit_webrtc==0.43.4
+streamlit-nested-layout==0.1.1
