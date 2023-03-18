@@ -45,7 +45,7 @@ thresholds = {
 }
 
 # For streamlit-webrtc
-video_handler = VideoFrameHandler()
+video_handler = VideoFrameHandler(webrtc_streamer)
 audio_handler = AudioFrameHandler(sound_file_path=alarm_file_path)
 
 lock = threading.Lock()  # For thread-safe access & to prevent race-condition.
@@ -74,11 +74,11 @@ def audio_frame_callback(frame: av.AudioFrame):
 
 with col1:
     ctx = webrtc_streamer(
-        key="driver-drowsiness-detection",
+        key="drowsiness-detection",
         video_frame_callback=video_frame_callback,
         audio_frame_callback=audio_frame_callback,
         rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},  # Add this to config for cloud deployment.
-        media_stream_constraints={"video": {"height": True}, "audio": True},
+        media_stream_constraints={"video": {"height": {"ideal": 480}}, "audio": True},
         video_html_attrs=VideoHTMLAttributes(autoPlay=True, controls=False, muted=False),
     )
 
