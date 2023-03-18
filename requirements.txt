@@ -2,9 +2,9 @@ cryptography==38.0.0
 pyOpenSSL
 aiortc
 numpy
-opencv-python-headless
+#opencv-python-headless
 pydub
 mediapipe
 streamlit==1.13.0
-streamlit_webrtc==0.43.4
+streamlit_webrtc==0.45.0
 streamlit-nested-layout==0.1.1
