@@ -3,7 +3,7 @@ import av
 import threading
 import streamlit as st
 import streamlit_nested_layout
-from streamlit_webrtc import VideoHTMLAttributes, webrtc_streamer
+from streamlit_webrtc import VideoHTMLAttributes, webrtc_streamer,WebRtcMode,RTCConfiguration
 
 from audio_handling import AudioFrameHandler
 from drowsy_detection import VideoFrameHandler
@@ -77,7 +77,8 @@ with col1:
         key="drowsiness-detection",
         video_frame_callback=video_frame_callback,
         audio_frame_callback=audio_frame_callback,
-        rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},  # Add this to config for cloud deployment.
+        mode=WebRtcMode.SENDRECV,
+        rtc_configuration=RTCConfiguration({"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}),  # Add this to config for cloud deployment.
         media_stream_constraints={"video": {"height": {"ideal": 480}}, "audio": True},
         video_html_attrs=VideoHTMLAttributes(autoPlay=True, controls=False, muted=False),
     )
