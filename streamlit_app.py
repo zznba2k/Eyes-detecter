@@ -45,7 +45,7 @@ thresholds = {
 }
 
 # For streamlit-webrtc
-video_handler = VideoFrameHandler(webrtc_streamer)
+video_handler = VideoFrameHandler()
 audio_handler = AudioFrameHandler(sound_file_path=alarm_file_path)
 
 lock = threading.Lock()  # For thread-safe access & to prevent race-condition.
